@@ -40,4 +40,10 @@ namespace IntegrationTesting.Model
         public Employee Data { get; set; }
         public string Message { get; set; }
     }
+
+    public class EmployeeDeleteResponseObject
+    {
+        public string Status { get; set; }
+        public string Message { get; set; }
+    }
 }

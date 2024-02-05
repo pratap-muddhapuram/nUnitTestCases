@@ -17,6 +17,6 @@ namespace IntegrationTesting.Interfaces
         Task<List<Employee>> GetEmployees();
         Task<Employee> GetEmployee(int id);
         Task<Employee> PostEmployee(Employee employee);
-        Task DeleteEmployee(int id);
+        Task<bool> DeleteEmployee(int id);
     }
 }

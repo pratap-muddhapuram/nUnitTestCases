@@ -86,5 +86,19 @@ namespace IntegrationTesting.Controllers
             }
         }
         #endregion
+
+        #region DeleteEmployee API - to detail employee details based on employee id
+        /// <summary>
+        /// DeleteEmployee API - to delete particular employee details based on employee id
+        /// </summary>
+        /// <param name="id">employee id</param>
+        /// <returns>boolean variable successfully deleted or not</returns>
+        [HttpGet, Route("DeleteEmployee/{id}")]
+        public Task<bool> DeleteEmployee(int id)
+        {
+            Task<bool> isDeleted = _employeeService.DeleteEmployee(id);
+            return isDeleted;
+        }
+        #endregion
     }
 }

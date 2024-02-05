@@ -33,11 +33,16 @@ namespace IntegrationTesting
         /// Delete Employee operation
         /// </summary>
         /// <param name="id">employee id</param>
-        /// <returns>Success message</returns>
-        /// <exception cref="NotImplementedException"></exception>
-        Task IEmployeeService.DeleteEmployee(int id)
+        /// <returns>bool variable is deleted or not</returns>
+        public async Task<bool> DeleteEmployee(int id)
         {
-            throw new NotImplementedException();
+            HttpResponseMessage response = await _httpClient.GetAsync("https://dummy.restapiexample.com/api/v1/delete/" + id);
+            if (response.IsSuccessStatusCode)
+            {
+               return true;
+            }
+
+            return false;
         }
         #endregion
 
@@ -112,7 +117,7 @@ namespace IntegrationTesting
         /// <typeparam name="T">Generic class name</typeparam>
         /// <param name="response">http response message</param>
         /// <returns>Deserialized object</returns>
-        private async Task<T> ParseData<T>(HttpResponseMessage response) where T: class
+        private static async Task<T> ParseData<T>(HttpResponseMessage response) where T : class
         {
             var content = await response.Content.ReadAsStringAsync();
             return JsonConvert.DeserializeObject<T>(content);
