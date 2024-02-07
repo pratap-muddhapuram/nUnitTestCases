@@ -15,6 +15,8 @@ ContextAPI - folder consists of DB context(using EF) to facilitate the Integrati
 
 Swagger file: ![ContextAPI-Swagger](https://github.com/pratap-muddhapuram/nUnitTestCases/assets/158859681/833a607e-0c8d-498f-84f1-197c22ed7dda)
 
+ValidateDbcontextUserwitAPI : ![IntegrationTestResults](https://github.com/pratap-muddhapuram/nUnitTestCases/assets/158859681/dd7a8523-abed-4089-b425-05c76bdc5a9a)
+
 Test Results : ![OverAll_TestResults](https://github.com/pratap-muddhapuram/nUnitTestCases/assets/158859681/1ef082aa-b268-434d-8d62-ee4e700a8cfe)
 
 
